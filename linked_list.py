@@ -46,12 +46,12 @@ class LinkedList:
 
     def remove_first(self):
         if self.head is None:
-            raise ValueError("Невозможно удалить из пустого списка")
+            raise ValueError("Нельзя удалить из пустого списка")
         self.head = self.head.next
 
     def remove_last(self):
         if self.head is None:
-            raise ValueError("Невозможно удалить из пустого списка")
+            raise ValueError("Нельзя удалить из пустого списка")
         if self.head.next is None:
             self.head = None
             return
@@ -83,13 +83,13 @@ class LinkedList:
                 return
             b = current
             current = current.next
-        raise ValueError("Значение не найдено в списке")
+        raise ValueError("Значения нет в списке")
 
     def remove_last_value(self, value):
         current = self.head
         t = None
         if self.head is None:
-            raise ValueError('Список пуст')
+            raise ValueError('Список пустой')
         elif self.head is not None and self.head.next is None:
             if self.head.value == value:
                 self.head = None
